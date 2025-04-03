@@ -1,0 +1,98 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background and Title -->
+  <rect x="0" y="0" width="800" height="500" fill="#f8f9fa" rx="10" ry="10" />
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" font-weight="bold">Conditional Restricted Boltzmann Machine (CRBM)</text>
+  
+  <!-- Layers -->
+  <!-- Visible Layer -->
+  <g id="visible-layer">
+    <text x="400" y="460" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Visible Layer (v)</text>
+    <circle cx="250" cy="400" r="20" fill="#6baed6" stroke="#2171b5" stroke-width="2" />
+    <circle cx="325" cy="400" r="20" fill="#6baed6" stroke="#2171b5" stroke-width="2" />
+    <circle cx="400" cy="400" r="20" fill="#6baed6" stroke="#2171b5" stroke-width="2" />
+    <circle cx="475" cy="400" r="20" fill="#6baed6" stroke="#2171b5" stroke-width="2" />
+    <circle cx="550" cy="400" r="20" fill="#6baed6" stroke="#2171b5" stroke-width="2" />
+    
+    <text x="250" cy="400" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">v₁</text>
+    <text x="325" cy="400" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">v₂</text>
+    <text x="400" cy="400" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">v₃</text>
+    <text x="475" cy="400" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">v₄</text>
+    <text x="550" cy="400" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">v₅</text>
+  </g>
+  
+  <!-- Hidden Layer -->
+  <g id="hidden-layer">
+    <text x="400" y="125" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Hidden Layer (h)</text>
+    <circle cx="300" cy="180" r="20" fill="#fd8d3c" stroke="#e6550d" stroke-width="2" />
+    <circle cx="375" cy="180" r="20" fill="#fd8d3c" stroke="#e6550d" stroke-width="2" />
+    <circle cx="450" cy="180" r="20" fill="#fd8d3c" stroke="#e6550d" stroke-width="2" />
+    <circle cx="525" cy="180" r="20" fill="#fd8d3c" stroke="#e6550d" stroke-width="2" />
+    
+    <text x="300" cy="180" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">h₁</text>
+    <text x="375" cy="180" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">h₂</text>
+    <text x="450" cy="180" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">h₃</text>
+    <text x="525" cy="180" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">h₄</text>
+  </g>
+  
+  <!-- Conditional Layer -->
+  <g id="conditional-layer">
+    <text x="100" y="125" font-family="Arial" font-size="18" text-anchor="middle" font-weight="bold">Conditional Layer (c)</text>
+    <circle cx="100" cy="180" r="20" fill="#31a354" stroke="#006d2c" stroke-width="2" />
+    <circle cx="100" cy="235" r="20" fill="#31a354" stroke="#006d2c" stroke-width="2" />
+    <circle cx="100" cy="290" r="20" fill="#31a354" stroke="#006d2c" stroke-width="2" />
+    
+    <text x="100" cy="180" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">c₁</text>
+    <text x="100" cy="235" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">c₂</text>
+    <text x="100" cy="290" font-family="Arial" font-size="14" text-anchor="middle" dominant-baseline="middle" fill="white">c₃</text>
+  </g>
+  
+  <!-- Connections -->
+  <!-- Visible to Hidden (W) -->
+  <g id="w-connections" stroke="#999" stroke-width="1.5" opacity="0.6">
+    <!-- Just drawing a subset of all possible connections for clarity -->
+    <line x1="250" y1="400" x2="300" y2="180" />
+    <line x1="250" y1="400" x2="375" y2="180" />
+    <line x1="325" y1="400" x2="300" y2="180" />
+    <line x1="325" y1="400" x2="375" y2="180" />
+    <line x1="325" y1="400" x2="450" y2="180" />
+    <line x1="400" y1="400" x2="375" y2="180" />
+    <line x1="400" y1="400" x2="450" y2="180" />
+    <line x1="400" y1="400" x2="525" y2="180" />
+    <line x1="475" y1="400" x2="450" y2="180" />
+    <line x1="475" y1="400" x2="525" y2="180" />
+    <line x1="550" y1="400" x2="525" y2="180" />
+  </g>
+  
+  <!-- Conditional to Hidden (U) -->
+  <g id="u-connections" stroke="#31a354" stroke-width="2" opacity="0.6">
+    <line x1="100" y1="180" x2="300" y2="180" />
+    <line x1="100" y1="180" x2="375" y2="180" />
+    <line x1="100" y1="180" x2="450" y2="180" />
+    <line x1="100" y1="180" x2="525" y2="180" />
+    <line x1="100" y1="235" x2="300" y2="180" />
+    <line x1="100" y1="235" x2="375" y2="180" />
+    <line x1="100" y1="235" x2="450" y2="180" />
+    <line x1="100" y1="235" x2="525" y2="180" />
+    <line x1="100" y1="290" x2="300" y2="180" />
+    <line x1="100" y1="290" x2="375" y2="180" />
+    <line x1="100" y1="290" x2="450" y2="180" />
+    <line x1="100" y1="290" x2="525" y2="180" />
+  </g>
+  
+  <!-- Labels for weight matrices -->
+  <text x="200" y="290" font-family="Arial" font-size="16" text-anchor="middle" fill="#006d2c" font-weight="bold">U Weights</text>
+  <text x="400" y="290" font-family="Arial" font-size="16" text-anchor="middle" fill="#555" font-weight="bold">W Weights</text>
+  
+  <!-- Energy Function -->
+  <rect x="550" y="70" width="230" height="80" fill="white" stroke="#333" stroke-width="1" rx="5" ry="5" />
+  <text x="565" y="90" font-family="Arial" font-size="14">Energy Function:</text>
+  <text x="565" y="115" font-family="Arial" font-size="14" font-style="italic">E(v,h|c) = -v⊤Wh -b⊤v -a⊤h -c⊤Uh</text>
+  <text x="565" y="140" font-family="Arial" font-size="12">Where W, U are weight matrices</text>
+  
+  <!-- Conditional Probabilities -->
+  <rect x="550" y="170" width="230" height="100" fill="white" stroke="#333" stroke-width="1" rx="5" ry="5" />
+  <text x="565" y="190" font-family="Arial" font-size="14">Conditional Probabilities:</text>
+  <text x="565" y="215" font-family="Arial" font-size="12" font-style="italic">P(h_j=1|v,c) = σ(∑_i W_ij v_i + a_j</text>
+  <text x="585" y="235" font-family="Arial" font-size="12" font-style="italic">+ ∑_k U_kj c_k)</text>
+  <text x="565" y="260" font-family="Arial" font-size="12" font-style="italic">P(v_i=1|h) = σ(∑_j W_ij h_j + b_i)</text>
+</svg>
